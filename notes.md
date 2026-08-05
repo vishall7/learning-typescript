@@ -18,6 +18,7 @@ to init TS -
 #### change the course midway (following web dev simplified)
 - type can be defined as variable
 - even function can
+- function who returns nothing have ``void`` as return type
 - follow the Pascal case for covention
 - you can use union types to a variable with |
 - importing types ? use type after import keyword, it only imports metadata, and gets earase in runtime so no missing import issues in runtime.
@@ -64,3 +65,27 @@ function suppose2(arg: string = "something") {
 
 suppose2()
   ```
+
+  Literal Types
+  - we have literal types in ts that dont just specify the type its literal values
+  - its specific and only be used in specific cases
+  - we do not need to define the generic type as it have literal value so as the type( by type inference)
+ ```ts
+  type Direction = "north" | "east" | "south" | "west";
+
+function move(direction: Direction) {
+  console.log(`you move to ${direction} direction`)
+}
+
+console.log(move("south"))
+```
+
+Super Set Union
+- its used in also very specific case
+- when we define literal types then in some cases we do need any vlaue along with define literal types
+- in that case we do this ``type count = 0 | 1 | 3 | number``
+- this allows any number along with defined literal types, better type intellisense
+
+Template Literal Types
+- there is also types that are unions we can join multiple types with template literal syntax
+- and thats it we not oftenly use that

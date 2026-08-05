@@ -35,18 +35,26 @@
 
 // console.log(getTicketInfo(167));
 
-function suppose(arg1: string, arg2?: number) {
-  console.log(`arg 1 is ${arg1}`)
+// function suppose(arg1: string, arg2?: number) {
+//   console.log(`arg 1 is ${arg1}`)
 
-  if(arg2 != null)
-  console.log(`arg 2 is ${arg2}`)
-}
+//   if(arg2 != null)
+//   console.log(`arg 2 is ${arg2}`)
+// }
 
 // suppose("age")
 
-function suppose2(arg: string = "something") {
-  console.log(`argument is ${arg}`)
+// function suppose2(arg: string = "something") {
+//   console.log(`argument is ${arg}`)
+// }
+
+
+// suppose2()
+
+type Direction = "north" | "east" | "south" | "west";
+
+function move(direction: Direction) {
+  console.log(`you move to ${direction} direction`)
 }
 
-
-suppose2()
+console.log(move("south"))
